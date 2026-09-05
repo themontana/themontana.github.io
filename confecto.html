@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confecto - Sweet Roguelike Deckbuilder</title>
+    <meta name="description" content="Confecto is an addictive, candy-flavored roguelike card game inspired by deckbuilders. Master sweet synergies, collect quirky mascots, and beat high scores!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍧</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #120d24;
+            --bg-card: rgba(30, 23, 56, 0.75);
+            --primary-pink: #ff4d8d;
+            --primary-glow: #ff75a0;
+            --accent-cyan: #00e5ff;
+            --accent-yellow: #ffb800;
+            --text-main: #ffffff;
+            --text-muted: #b8b3d6;
+            --border-glow: rgba(255, 77, 141, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(255, 77, 141, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(0, 229, 255, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.08) 0%, transparent 50%);
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, .logo-text {
+            font-family: 'Fredoka', cursive;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAVBAR */
+        nav {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            filter: drop-shadow(0 4px 10px rgba(255, 77, 141, 0.5));
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff4d8d, #ffb800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 90px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            padding: 8px 18px;
+            background: rgba(255, 77, 141, 0.15);
+            border: 1px solid var(--border-glow);
+            border-radius: 50px;
+            color: var(--primary-glow);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+            box-shadow: 0 0 20px rgba(255, 77, 141, 0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #ff4d8d 20%, #00e5ff 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 22px);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-family: 'Fredoka', cursive;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff4d8d, #e0115f);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 77, 141, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 77, 141, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+        }
+
+        /* FEATURES GRID */
+        .features {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 18px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* LEGAL & FOOTER */
+        footer {
+            margin-top: 60px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        /* PRIVACY POLICY SECTION */
+        .privacy-section {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 36px;
+            margin: 60px 0;
+            text-align: left;
+        }
+
+        .privacy-section h3 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: var(--primary-glow);
+        }
+
+        .privacy-section p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 50px 0 40px; }
+            .btn { width: 100%; justify-content: center; }
+            .privacy-section { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">🍨</span>
+                <span class="logo-text">Confecto</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" style="background: rgba(255, 255, 255, 0.08); padding: 6px 12px; border-radius: 16px; color: #fff;">← All Apps</a>
+                <a href="#features">Features</a>
+                <a href="#privacy">Privacy</a>
+                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank" style="color: var(--primary-glow);">Google Play</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="badge-pill">✨ Roguelike Deckbuilding Game</div>
+            <h1>The Sweetest <span>Card Roguelike</span> Adventure</h1>
+            <p class="hero-subtitle">
+                Serve delicious combos, collect whimsical candy mascots, and conquer escalating boss blinds in an endlessly replayable dessert roguelike.
+            </p>
+            <div class="cta-group">
+                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank" class="btn btn-primary">
+                    <span>🎮 Download on Google Play</span>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    <span>Explore Game</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features" id="features">
+            <div class="section-title">
+                <h2>Why You'll Love Confecto</h2>
+                <p>Every run is unique. Build your recipe for the ultimate high score.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">🍓</span>
+                    <h3>Sweet Synergies</h3>
+                    <p>Combine flavours, trigger explosive score multipliers, and find irresistible card combinations with every hand you play.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🧸</span>
+                    <h3>Quirky Mascots</h3>
+                    <p>Unlock unique mascots with special passive modifiers that completely transform your deck and gameplay strategy.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎟️</span>
+                    <h3>Shop & Vouchers</h3>
+                    <p>Spend your hard-earned winnings in the shop on game-altering vouchers, booster packs, and deck upgrades.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👑</span>
+                    <h3>Boss Blinds</h3>
+                    <p>Face off against increasingly challenging boss courses with devious rules that put your strategic mastery to the test.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY POLICY (Required for Google Play Store compliance) -->
+        <section class="privacy-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: September 2026</strong></p>
+            <p>
+                Welcome to <strong>Confecto</strong> (developed by themontana). We are committed to protecting your privacy. This Privacy Policy explains how our game collects, uses, and discloses information.
+            </p>
+            <p>
+                <strong>Information We Collect:</strong> Confecto does not collect personally identifiable information directly. The game utilizes third-party services (such as Google Play Services, Unity LevelPlay, and Google AdMob) to deliver advertisements and track general gameplay analytics for performance improvements.
+            </p>
+            <p>
+                <strong>Advertising:</strong> Third-party ad partners may collect advertising identifiers (such as Google Advertising ID) to serve non-personalized or personalized ads subject to applicable privacy regulations.
+            </p>
+            <p>
+                <strong>Contact Us:</strong> If you have any questions or feedback regarding Confecto or this policy, please reach out via GitHub at <a href="https://github.com/themontana" style="color: var(--primary-glow);">github.com/themontana</a>.
+            </p>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#features">Features</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank">Google Play Store</a>
+                <a href="https://github.com/themontana/themontana.github.io/blob/main/app-ads.txt" target="_blank">app-ads.txt</a>
+            </div>
+            <p>&copy; 2026 Confecto / themontana. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

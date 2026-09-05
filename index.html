@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confecto - Sweet Roguelike Deckbuilder</title>
-    <meta name="description" content="Confecto is an addictive, candy-flavored roguelike card game inspired by deckbuilders. Master sweet synergies, collect quirky mascots, and beat high scores!">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍧</text></svg>">
+    <title>themontana | Apps & Games</title>
+    <meta name="description" content="Official website and privacy policies for mobile apps and games developed by themontana, including Confecto and LGS İngilizce Kelime.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #120d24;
-            --bg-card: rgba(30, 23, 56, 0.75);
-            --primary-pink: #ff4d8d;
-            --primary-glow: #ff75a0;
-            --accent-cyan: #00e5ff;
-            --accent-yellow: #ffb800;
-            --text-main: #ffffff;
-            --text-muted: #b8b3d6;
-            --border-glow: rgba(255, 77, 141, 0.3);
+            --bg-dark: #0B0F19;
+            --bg-card: rgba(17, 24, 39, 0.8);
+            --text-main: #F9FAFB;
+            --text-muted: #9CA3AF;
+            --border-color: rgba(255, 255, 255, 0.09);
         }
 
         * {
@@ -29,37 +25,35 @@
         }
 
         body {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 20%, rgba(255, 77, 141, 0.18) 0%, transparent 40%),
-                radial-gradient(circle at 85% 75%, rgba(0, 229, 255, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.08) 0%, transparent 50%);
             min-height: 100vh;
-        }
-
-        h1, h2, h3, .logo-text {
-            font-family: 'Fredoka', cursive;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(255, 77, 141, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
+            width: 100%;
         }
 
-        /* NAVBAR */
-        nav {
-            padding: 24px 0;
+        /* HEADER */
+        header {
+            padding: 28px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .logo {
+        .brand {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -67,337 +61,367 @@
             color: var(--text-main);
         }
 
-        .logo-icon {
-            font-size: 32px;
-            filter: drop-shadow(0 4px 10px rgba(255, 77, 141, 0.5));
+        .brand-icon {
+            font-size: 28px;
         }
 
-        .logo-text {
-            font-size: 28px;
+        .brand-text {
+            font-family: 'Fredoka', cursive;
+            font-size: 26px;
             font-weight: 700;
-            background: linear-gradient(135deg, #ff4d8d, #ffb800);
+            background: linear-gradient(135deg, #FF4D8D, #38BDF8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 0.5px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-links a {
+        .header-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 700;
+            font-size: 14px;
+            font-weight: 600;
             transition: color 0.2s;
-            font-size: 15px;
         }
 
-        .nav-links a:hover {
+        .header-links a:hover {
             color: var(--text-main);
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
-            padding: 90px 0 60px;
+            padding: 60px 0 40px;
             text-align: center;
-            position: relative;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        .badge-pill {
-            display: inline-block;
-            padding: 8px 18px;
-            background: rgba(255, 77, 141, 0.15);
-            border: 1px solid var(--border-glow);
-            border-radius: 50px;
-            color: var(--primary-glow);
-            font-weight: 700;
+        .badge-dev {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
+            border-radius: 30px;
             font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 24px;
-            box-shadow: 0 0 20px rgba(255, 77, 141, 0.2);
+            font-weight: 600;
+            color: #E2E8F0;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 76px);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
+            font-size: 44px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         .hero h1 span {
-            background: linear-gradient(135deg, #ff4d8d 20%, #00e5ff 80%);
+            background: linear-gradient(135deg, #FF75A0, #38BDF8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-subtitle {
-            font-size: clamp(18px, 2.5vw, 22px);
+        .hero p {
             color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto 36px;
+            font-size: 18px;
             line-height: 1.6;
         }
 
-        .cta-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: 16px;
-            font-family: 'Fredoka', cursive;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ff4d8d, #e0115f);
-            color: #fff;
-            box-shadow: 0 8px 25px rgba(255, 77, 141, 0.45);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(255, 77, 141, 0.6);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-3px);
-        }
-
-        /* FEATURES GRID */
-        .features {
-            padding: 70px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 18px;
-        }
-
-        .grid {
+        /* APPS GRID */
+        .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            padding: 20px 0 60px;
         }
 
-        .card {
+        .app-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 32px 24px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .card:hover {
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card-confecto:hover {
+            border-color: rgba(255, 77, 141, 0.5);
             transform: translateY(-6px);
-            border-color: var(--border-glow);
-            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 77, 141, 0.15);
+        }
+        .card-confecto::before {
+            background: linear-gradient(90deg, #FF4D8D, #FFB800);
+        }
+        .card-confecto:hover::before {
+            opacity: 1;
         }
 
-        .card-icon {
-            font-size: 40px;
-            margin-bottom: 18px;
-            display: inline-block;
+        .card-lgs:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
+        }
+        .card-lgs::before {
+            background: linear-gradient(90deg, #0284C7, #06B6D4);
+        }
+        .card-lgs:hover::before {
+            opacity: 1;
         }
 
-        .card h3 {
-            font-size: 22px;
+        .app-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .app-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+        }
+
+        .avatar-confecto {
+            background: rgba(255, 77, 141, 0.15);
+            border: 1px solid rgba(255, 77, 141, 0.3);
+        }
+
+        .avatar-lgs {
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .app-category {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cat-confecto {
+            background: rgba(255, 77, 141, 0.15);
+            color: #FF75A0;
+        }
+
+        .cat-lgs {
+            background: rgba(6, 182, 212, 0.15);
+            color: #38BDF8;
+        }
+
+        .app-title {
+            font-size: 26px;
+            font-weight: 800;
             margin-bottom: 10px;
-            color: var(--text-main);
         }
 
-        .card p {
+        .app-desc {
             color: var(--text-muted);
             font-size: 15px;
             line-height: 1.6;
+            margin-bottom: 28px;
+            flex-grow: 1;
         }
 
-        /* LEGAL & FOOTER */
-        footer {
-            margin-top: 60px;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
+        .app-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .footer-links {
+        .btn-portal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-confecto {
+            background: linear-gradient(135deg, #FF4D8D, #FF75A0);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(255, 77, 141, 0.3);
+        }
+
+        .btn-confecto:hover {
+            box-shadow: 0 10px 25px rgba(255, 77, 141, 0.45);
+        }
+
+        .btn-lgs {
+            background: linear-gradient(135deg, #0284C7, #06B6D4);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .btn-lgs:hover {
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.45);
+        }
+
+        .sub-links {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 6px;
         }
 
-        .footer-links a {
+        .sub-links a {
             color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover {
-            color: var(--primary-glow);
+        .sub-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
         }
 
-        /* PRIVACY POLICY SECTION */
-        .privacy-section {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 36px;
-            margin: 60px 0;
-            text-align: left;
-        }
-
-        .privacy-section h3 {
-            font-size: 26px;
-            margin-bottom: 16px;
-            color: var(--primary-glow);
-        }
-
-        .privacy-section p {
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            padding: 36px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
             color: var(--text-muted);
             font-size: 14px;
-            line-height: 1.7;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
             margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--text-main);
         }
 
         @media (max-width: 600px) {
-            .hero { padding: 50px 0 40px; }
-            .btn { width: 100%; justify-content: center; }
-            .privacy-section { padding: 24px; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .app-card { padding: 26px; }
+            .apps-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- NAVIGATION -->
-        <nav>
-            <a href="#" class="logo">
-                <span class="logo-icon">🍨</span>
-                <span class="logo-text">Confecto</span>
+        <!-- HEADER -->
+        <header>
+            <a href="index.html" class="brand">
+                <span class="brand-icon">🎮</span>
+                <span class="brand-text">themontana</span>
             </a>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#privacy">Privacy</a>
-                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank" style="color: var(--primary-glow);">Google Play</a>
+            <div class="header-links">
+                <a href="https://github.com/themontana" target="_blank">GitHub</a>
             </div>
-        </nav>
+        </header>
 
         <!-- HERO -->
         <section class="hero">
-            <div class="badge-pill">✨ Roguelike Deckbuilding Game</div>
-            <h1>The Sweetest <span>Card Roguelike</span> Adventure</h1>
-            <p class="hero-subtitle">
-                Serve delicious combos, collect whimsical candy mascots, and conquer escalating boss blinds in an endlessly replayable dessert roguelike.
+            <div class="badge-dev">🚀 Mobile Apps & Games</div>
+            <h1>Welcome to <span>themontana</span></h1>
+            <p>
+                Explore our independent mobile games and educational applications. Below you will find product overviews, customer support channels, and store privacy policies.
             </p>
-            <div class="cta-group">
-                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank" class="btn btn-primary">
-                    <span>🎮 Download on Google Play</span>
-                </a>
-                <a href="#features" class="btn btn-secondary">
-                    <span>Explore Game</span>
-                </a>
-            </div>
         </section>
 
-        <!-- FEATURES -->
-        <section class="features" id="features">
-            <div class="section-title">
-                <h2>Why You'll Love Confecto</h2>
-                <p>Every run is unique. Build your recipe for the ultimate high score.</p>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <span class="card-icon">🍓</span>
-                    <h3>Sweet Synergies</h3>
-                    <p>Combine flavours, trigger explosive score multipliers, and find irresistible card combinations with every hand you play.</p>
+        <!-- APPS SPLIT GRID -->
+        <section class="apps-grid">
+            
+            <!-- APP 1: CONFECTO -->
+            <div class="app-card card-confecto">
+                <div class="app-top">
+                    <div class="app-avatar avatar-confecto">🍧</div>
+                    <span class="app-category cat-confecto">Roguelike Game</span>
                 </div>
-                <div class="card">
-                    <span class="card-icon">🧸</span>
-                    <h3>Quirky Mascots</h3>
-                    <p>Unlock unique mascots with special passive modifiers that completely transform your deck and gameplay strategy.</p>
-                </div>
-                <div class="card">
-                    <span class="card-icon">🎟️</span>
-                    <h3>Shop & Vouchers</h3>
-                    <p>Spend your hard-earned winnings in the shop on game-altering vouchers, booster packs, and deck upgrades.</p>
-                </div>
-                <div class="card">
-                    <span class="card-icon">👑</span>
-                    <h3>Boss Blinds</h3>
-                    <p>Face off against increasingly challenging boss courses with devious rules that put your strategic mastery to the test.</p>
+                <h2 class="app-title">Confecto</h2>
+                <p class="app-desc">
+                    The sweetest card roguelike deckbuilding game. Master sweet synergies, collect quirky candy mascots, and beat escalating boss blinds in an addictive dessert universe.
+                </p>
+                <div class="app-actions">
+                    <a href="confecto.html" class="btn-portal btn-confecto">
+                        <span>Explore Confecto →</span>
+                    </a>
+                    <div class="sub-links">
+                        <a href="confecto.html#features">Features</a>
+                        <a href="confecto.html#privacy">Privacy Policy</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank">Google Play</a>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- PRIVACY POLICY (Required for Google Play Store compliance) -->
-        <section class="privacy-section" id="privacy">
-            <h3>Privacy Policy</h3>
-            <p><strong>Last Updated: September 2026</strong></p>
-            <p>
-                Welcome to <strong>Confecto</strong> (developed by themontana). We are committed to protecting your privacy. This Privacy Policy explains how our game collects, uses, and discloses information.
-            </p>
-            <p>
-                <strong>Information We Collect:</strong> Confecto does not collect personally identifiable information directly. The game utilizes third-party services (such as Google Play Services, Unity LevelPlay, and Google AdMob) to deliver advertisements and track general gameplay analytics for performance improvements.
-            </p>
-            <p>
-                <strong>Advertising:</strong> Third-party ad partners may collect advertising identifiers (such as Google Advertising ID) to serve non-personalized or personalized ads subject to applicable privacy regulations.
-            </p>
-            <p>
-                <strong>Contact Us:</strong> If you have any questions or feedback regarding Confecto or this policy, please reach out via GitHub at <a href="https://github.com/themontana" style="color: var(--primary-glow);">github.com/themontana</a>.
-            </p>
+            <!-- APP 2: LGS INGILIZCE KELIME -->
+            <div class="app-card card-lgs">
+                <div class="app-top">
+                    <div class="app-avatar avatar-lgs">📚</div>
+                    <span class="app-category cat-lgs">Eğitim & Sınav</span>
+                </div>
+                <h2 class="app-title">LGS İngilizce Kelime</h2>
+                <p class="app-desc">
+                    MEB 8. sınıf müfredatına %100 uyumlu LGS İngilizce kelime ezberleme uygulaması. Flashcardlar, sesli telaffuz, harita ilerleme modu, ligler ve günlük görevler.
+                </p>
+                <div class="app-actions">
+                    <a href="lgs-ingilizce.html" class="btn-portal btn-lgs">
+                        <span>LGS İngilizce Detayları →</span>
+                    </a>
+                    <div class="sub-links">
+                        <a href="lgs-ingilizce.html#support">İletişim & Destek</a>
+                        <a href="lgs-ingilizce.html#privacy">Gizlilik Politikası</a>
+                        <a href="lgs-ingilizce.html#features">Özellikler</a>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- FOOTER -->
         <footer>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#features">Features</a>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="https://play.google.com/store/apps/details?id=com.jake.gelatro" target="_blank">Google Play Store</a>
-                <a href="https://github.com/themontana/themontana.github.io/blob/main/app-ads.txt" target="_blank">app-ads.txt</a>
+            <div class="footer-nav">
+                <a href="confecto.html">Confecto</a>
+                <a href="lgs-ingilizce.html">LGS İngilizce Kelime</a>
+                <a href="lgs-ingilizce.html#support">Support</a>
+                <a href="lgs-ingilizce.html#privacy">Privacy Policy</a>
+                <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+                <a href="https://github.com/themontana" target="_blank">GitHub Profile</a>
             </div>
-            <p>&copy; 2026 Confecto / themontana. All rights reserved.</p>
+            <p>&copy; 2026 themontana. All rights reserved. Built with GitHub Pages.</p>
         </footer>
     </div>
 
