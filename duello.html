@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Kelime Düellosu - LGS İngilizce Kelime</title>
+<meta name="description" content="Arkadaşın sana LGS İngilizce kelime düellosunda meydan okudu. Aynı 10 soruyu çöz, skorunu geç!">
+<meta property="og:title" content="🥊 Kelime düellosuna davetlisin!">
+<meta property="og:description" content="Arkadaşın sana LGS İngilizce kelime düellosunda meydan okudu. Aynı 10 soruyu çöz, skorunu geç!">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0284C7; --accent: #F97316; --pink: #DB2777; --gold: #F59E0B;
+    --bg: #0F172A; --card: rgba(30, 41, 59, 0.9); --text: #F8FAFC; --muted: #94A3B8; --border: rgba(255,255,255,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.55;
+    background-image: radial-gradient(circle at 20% 10%, rgba(249,115,22,.22) 0%, transparent 40%), radial-gradient(circle at 85% 70%, rgba(219,39,119,.2) 0%, transparent 45%);
+    display: flex; justify-content: center; padding: 28px 16px 40px;
+  }
+  main { width: 100%; max-width: 440px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--muted); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+  .card { margin-top: 18px; background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 24px 20px; text-align: center; }
+  .glove { font-size: 54px; line-height: 1; }
+  h1 { font-size: 24px; font-weight: 800; margin-top: 12px; line-height: 1.25; }
+  .score { display: inline-flex; gap: 10px; margin-top: 16px; background: rgba(245,158,11,.14); border: 1px solid rgba(245,158,11,.4); color: #FDE68A; border-radius: 999px; padding: 8px 16px; font-weight: 800; }
+  .prev { margin-top: 12px; color: var(--muted); font-size: 14px; font-weight: 700; }
+  p.lead { margin-top: 14px; color: var(--muted); font-size: 15px; }
+  .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 12px; padding: 15px 18px; border-radius: 16px; font-weight: 800; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; margin-top: 22px; }
+  .btn.store { background: #fff; color: #0F172A; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .steps { text-align: left; margin-top: 20px; padding: 16px; border-radius: 16px; background: rgba(15,23,42,.6); border: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+  .steps strong { color: var(--text); }
+  .steps ol { padding-left: 20px; display: grid; gap: 6px; margin-top: 8px; }
+  .note { margin-top: 16px; font-size: 12px; color: var(--muted); text-align: center; }
+  .hidden { display: none; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: #16A34A; color: #fff; padding: 10px 16px; border-radius: 12px; font-weight: 800; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">📚 LGS İngilizce Kelime</div>
+
+  <section class="card" id="challenge">
+    <div class="glove">🥊</div>
+    <h1 id="headline">Kelime düellosuna davetlisin!</h1>
+    <div class="score hidden" id="score"></div>
+    <div class="prev hidden" id="prev"></div>
+    <p class="lead" id="lead">Aynı 10 İngilizce kelime sorusunu çöz. Çok doğru yapan, eşitlikte hızlı olan kazanır.</p>
+
+    <a class="btn primary" id="open" href="#">Uygulamada aç ve oyna</a>
+    <a class="btn store" id="play" href="https://play.google.com/store/apps/details?id=com.lgskelimeapp.app&referrer=utm_source%3Dduel%26utm_medium%3Dlink">▶ Google Play'den indir</a>
+    <a class="btn store" id="ios" href="https://apps.apple.com/app/id6753321196">App Store'dan indir</a>
+    <button class="btn ghost" id="copy" type="button">Linki kopyala</button>
+
+    <div class="steps">
+      <strong>Uygulama yüklü değil mi?</strong>
+      <ol>
+        <li>Yukarıdan ücretsiz indir.</li>
+        <li>Bu sayfaya geri dönüp <strong>Uygulamada aç</strong>'a dokun.</li>
+        <li>Açılmazsa: uygulamada <strong>Lig › Arkadaşına meydan oku</strong> ekranına bu linki yapıştır.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="card hidden" id="invalid">
+    <div class="glove">🤔</div>
+    <h1>Bu düello linki açılamadı</h1>
+    <p class="lead">Link eksik kopyalanmış olabilir. Arkadaşından mesajın tamamını tekrar göndermesini iste.</p>
+    <a class="btn store" href="https://play.google.com/store/apps/details?id=com.lgskelimeapp.app">▶ Google Play'den indir</a>
+    <a class="btn store" href="https://apps.apple.com/app/id6753321196">App Store'dan indir</a>
+  </section>
+
+  <p class="note">Düello bilgileri linkin içinde taşınır ve bu sayfa onları hiçbir yere göndermez.</p>
+</main>
+
+<script>
+  // Uygulamadaki src/learning/duel.ts ile aynı kodlama: base64url(UTF-8 JSON) + "." + FNV-1a sağlaması.
+  var B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  var SALT = 'lgs-duel-v1';
+  function fromB64(text) {
+    var bytes = [], buffer = 0, bits = 0;
+    for (var i = 0; i < text.length; i++) {
+      var v = B64.indexOf(text[i]); if (v < 0) throw new Error('bad');
+      buffer = (buffer << 6) | v; bits += 6;
+      if (bits >= 8) { bits -= 8; bytes.push((buffer >> bits) & 255); }
+    }
+    return new TextDecoder().decode(new Uint8Array(bytes));
+  }
+  function checksum(body) {
+    var h = 0x811c9dc5, bytes = new TextEncoder().encode(SALT + body);
+    for (var i = 0; i < bytes.length; i++) { h ^= bytes[i]; h = Math.imul(h, 0x01000193) >>> 0; }
+    return ('00000000' + h.toString(16)).slice(-8);
+  }
+  function decode(code) {
+    var parts = code.split('.');
+    if (parts.length !== 2 || checksum(parts[0]) !== parts[1]) return null;
+    try {
+      var p = JSON.parse(fromB64(parts[0]));
+      if (p.v !== 1 || !Array.isArray(p.w) || p.w.length !== 10 || !(p.c >= 0 && p.c <= 10) || !(p.t > 0)) return null;
+      return p;
+    } catch (e) { return null; }
+  }
+  function text(id, value) { var el = document.getElementById(id); el.textContent = value; el.classList.remove('hidden'); }
+
+  var match = location.hash.match(/d=([A-Za-z0-9_-]{20,}\.[0-9a-f]{8})/);
+  var code = match && match[1];
+  var payload = code && decode(code);
+  if (!payload) {
+    document.getElementById('challenge').classList.add('hidden');
+    document.getElementById('invalid').classList.remove('hidden');
+  } else {
+    var name = String(payload.n || 'Bir arkadaşın').slice(0, 20);
+    document.getElementById('headline').textContent = name + ' sana meydan okudu!';
+    text('score', payload.c + '/10 doğru · ' + Math.round(payload.t / 1000) + ' sn');
+    if (payload.p && payload.o) text('prev', 'Önceki tur: ' + name + ' ' + payload.p.c + ' – ' + payload.o.c + ' Sen');
+    document.title = '🥊 ' + name + ' sana meydan okudu! - LGS İngilizce Kelime';
+
+    var appLink = 'lgsingilizce://duel?d=' + code;
+    var playUrl = document.getElementById('play').href;
+    var isAndroid = /android/i.test(navigator.userAgent);
+    var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    var open = document.getElementById('open');
+    open.href = isAndroid
+      ? 'intent://duel?d=' + code + '#Intent;scheme=lgsingilizce;package=com.lgskelimeapp.app;S.browser_fallback_url=' + encodeURIComponent(playUrl) + ';end'
+      : appLink;
+    if (isAndroid) document.getElementById('ios').classList.add('hidden');
+    if (isIOS) document.getElementById('play').classList.add('hidden');
+  }
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var done = function () {
+      var t = document.createElement('div'); t.className = 'toast'; t.textContent = 'Link kopyalandı';
+      document.body.appendChild(t); setTimeout(function () { t.remove(); }, 1800);
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () {});
+  });
+</script>
+</body>
+</html>
