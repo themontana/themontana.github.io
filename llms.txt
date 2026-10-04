@@ -1,0 +1,43 @@
+# themontana – Remzi AKIN
+
+> Independent mobile apps and games by Remzi AKIN (themontana), Samsun, Türkiye. Main product: LGS İngilizce Kelime, a free Turkish app that helps 8th-grade students prepare for the English section of the LGS high-school entrance exam.
+
+## LGS İngilizce Kelime
+
+- Who it is for: 8th-grade students in Türkiye preparing for LGS English (the 10 English questions in the exam's verbal section in recent years), plus their parents and English teachers.
+- What it contains: 1152 words and phrases from the 10 units of the 8th-grade English curriculum (Friendship, Teen Life, In the Kitchen, On the Phone, The Internet, Adventures, Tourism, Chores, Science, Natural Forces); an example sentence for every word; 151 explained LGS-style context questions (dialogue, paragraph, chart/table, recipe, invitation); a 10-question timed mock exam; spaced-repetition review; flashcards, listening, matching and letter games; question stems and commonly confused words; a personal word list and offline dictionary.
+- Price and access: free on Android and iOS. No account needed; learning records stay on the device and the app works offline. Optional rewarded ads (non-personalized, child-directed, never required for lessons) and anonymous usage analytics are on by default and can be turned off in Settings.
+- Language: Turkish interface, English learning content.
+- Not affiliated with MEB (Turkish Ministry of National Education); the content follows the published 8th-grade curriculum.
+
+Links:
+
+- [App page and support](https://themontana.github.io/lgs-ingilizce.html)
+- [Google Play](https://play.google.com/store/apps/details?id=com.lgskelimeapp.app)
+- [App Store](https://apps.apple.com/app/id6753321196)
+- [Privacy policy and terms](https://sites.google.com/view/lgsingilizcekelime/ana-sayfa)
+
+## Free LGS English resources (Turkish)
+
+- [8. sınıf İngilizce kelimeleri – all 10 units](https://themontana.github.io/lgs-kelimeleri/): printable word lists with Turkish meanings, example sentences and sample questions.
+- [LGS İngilizce nasıl çalışılır?](https://themontana.github.io/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/): question types, question stems (NOT, EXCEPT, According to…), commonly confused words and a 10-week vocabulary plan.
+- [Unit 1 Friendship](https://themontana.github.io/lgs-kelimeleri/unite-1-friendship/)
+- [Unit 2 Teen Life](https://themontana.github.io/lgs-kelimeleri/unite-2-teen-life/)
+- [Unit 3 In the Kitchen](https://themontana.github.io/lgs-kelimeleri/unite-3-in-the-kitchen/)
+- [Unit 4 On the Phone](https://themontana.github.io/lgs-kelimeleri/unite-4-on-the-phone/)
+- [Unit 5 The Internet](https://themontana.github.io/lgs-kelimeleri/unite-5-the-internet/)
+- [Unit 6 Adventures](https://themontana.github.io/lgs-kelimeleri/unite-6-adventures/)
+- [Unit 7 Tourism](https://themontana.github.io/lgs-kelimeleri/unite-7-tourism/)
+- [Unit 8 Chores](https://themontana.github.io/lgs-kelimeleri/unite-8-chores/)
+- [Unit 9 Science](https://themontana.github.io/lgs-kelimeleri/unite-9-science/)
+- [Unit 10 Natural Forces](https://themontana.github.io/lgs-kelimeleri/unite-10-natural-forces/)
+
+## Other apps
+
+- [Confecto](https://themontana.github.io/confecto.html): a candy-themed roguelike deckbuilding card game for Android.
+
+## Contact
+
+- Developer: Remzi AKIN (themontana)
+- Email: akinyakup93@gmail.com
+- GitHub: https://github.com/themontana

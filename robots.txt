@@ -1,3 +1,6 @@
+# Arama motorları ve yapay zekâ arama/asistan botları dahil herkese açık.
 User-agent: *
 Allow: /
+
+Sitemap: https://themontana.github.io/sitemap.xml
 Sitemap: https://themontana.github.io/lgs-kelimeleri/sitemap.xml
