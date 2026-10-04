@@ -31,6 +31,9 @@ Links:
 - [Unit 8 Chores](https://themontana.github.io/lgs-kelimeleri/unite-8-chores/)
 - [Unit 9 Science](https://themontana.github.io/lgs-kelimeleri/unite-9-science/)
 - [Unit 10 Natural Forces](https://themontana.github.io/lgs-kelimeleri/unite-10-natural-forces/)
+- [7. sınıf İngilizce kelimeleri](https://themontana.github.io/lgs-kelimeleri/7-sinif/): 7th-grade word lists (website only, not in the app) with Turkish meanings and example sentences.
+- [Grade 7 Unit 1 Appearance and Personality](https://themontana.github.io/lgs-kelimeleri/7-sinif/unite-1-appearance-and-personality/)
+- [Grade 7 Unit 2 Sports](https://themontana.github.io/lgs-kelimeleri/7-sinif/unite-2-sports/)
 
 ## Other apps
 

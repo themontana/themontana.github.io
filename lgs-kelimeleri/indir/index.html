@@ -59,6 +59,7 @@ h2{font-size:22px;margin:36px 0 12px}
 .words li{padding:14px 16px;border-top:1px solid var(--border)}
 .words li:first-child{border-top:0}
 .words li:nth-child(even){background:var(--row)}
+.words li.grp{background:var(--soft);font-weight:800;font-size:14px;padding:10px 16px;color:var(--primary)}
 .w{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
 .en{font-weight:800;font-size:17px}
 .tr{color:var(--text)}
@@ -137,7 +138,7 @@ footer{margin-top:48px;padding:24px 0;border-top:1px solid var(--border);color:v
 </div></footer>
 <script>
 (function(){
-  var u=(location.search.match(/[?&]u=(\d{1,2})/)||[])[1],ua=navigator.userAgent;
+  var u=(location.search.match(/[?&]u=([\w-]{1,6})/)||[])[1],ua=navigator.userAgent;
   var play='https://play.google.com/store/apps/details?id=com.lgskelimeapp.app&referrer='+encodeURIComponent('utm_source=website&utm_medium=print'+(u?'-unit-'+u:''));
   document.getElementById('play').href=play;
   if(/android/i.test(ua))location.replace(play);
