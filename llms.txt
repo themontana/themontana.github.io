@@ -21,6 +21,7 @@ Links:
 
 - [8. sınıf İngilizce kelimeleri – all 10 units](https://themontana.github.io/lgs-kelimeleri/): printable word lists with Turkish meanings, example sentences and sample questions.
 - [LGS İngilizce nasıl çalışılır?](https://themontana.github.io/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/): question types, question stems (NOT, EXCEPT, According to…), commonly confused words and a 10-week vocabulary plan.
+- [8. sınıf İngilizce çalışma kağıtları (PDF)](https://themontana.github.io/lgs-kelimeleri/calisma-kagitlari/): free printable unit tests, 14 LGS-style questions per unit on one double-sided A4 sheet with an answer key.
 - [Unit 1 Friendship](https://themontana.github.io/lgs-kelimeleri/unite-1-friendship/)
 - [Unit 2 Teen Life](https://themontana.github.io/lgs-kelimeleri/unite-2-teen-life/)
 - [Unit 3 In the Kitchen](https://themontana.github.io/lgs-kelimeleri/unite-3-in-the-kitchen/)

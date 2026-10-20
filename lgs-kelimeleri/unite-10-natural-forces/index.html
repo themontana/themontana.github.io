@@ -87,6 +87,14 @@ footer{margin-top:48px;padding:24px 0;border-top:1px solid var(--border);color:v
 .scroll{overflow-x:auto}
 .prose{max-width:760px}
 .prose li{margin:4px 0}
+.card .thumb{display:block;width:100%;height:auto;aspect-ratio:794/1123;border:1px solid var(--border);border-radius:8px;margin-bottom:10px;background:#fff}
+.ws{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:start;margin:8px 0 12px}
+.ws .page{display:block;width:100%;height:auto;aspect-ratio:794/1123;border:1px solid var(--border);border-radius:10px;background:#fff;box-shadow:0 6px 24px rgba(30,27,75,.08)}
+.ws ul{margin:0 0 16px;padding-left:20px}
+.ws li{margin:4px 0}
+.share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;color:var(--muted);margin-top:12px}
+.note{background:var(--soft);border-radius:14px;padding:14px 16px;margin:16px 0}
+@media (max-width:680px){.ws{grid-template-columns:1fr}.ws>div{order:-1}.ws .page{max-width:340px}}
 @media print{
   @page{size:A4;margin:9mm 10mm}
   header.top,footer,main>:not(.sheet){display:none!important}
@@ -283,7 +291,7 @@ footer{margin-top:48px;padding:24px 0;border-top:1px solid var(--border);color:v
 </ul>
 <p id="empty" class="empty">Bu ünitede eşleşen kelime yok.</p>
 <h2>10. Ünite örnek LGS soruları</h2>
-<p class="prose">Bu kelimeler LGS'de bağlam içinde sorulur. Aşağıdaki sorular uygulamadaki 151 açıklamalı sorudan seçildi; önce kendin çöz, sonra açıklamaya bak. Soru kökleri için <a href="/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/#soru-kokleri">çalışma rehberine</a> göz atabilirsin.</p>
+<p class="prose">Bu kelimeler LGS'de bağlam içinde sorulur. Aşağıdaki sorular uygulamadaki 1000 açıklamalı sorudan seçildi; önce kendin çöz, sonra açıklamaya bak. Soru kökleri için <a href="/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/#soru-kokleri">çalışma rehberine</a> göz atabilirsin.</p>
 <article class="q" lang="en">
   <div class="kind" lang="tr">Diyalog sorusu</div>
   <div class="ctx">Jane: What is the biggest threat to our planet?
@@ -304,6 +312,7 @@ Paul: I think it is global warming. The Earth is getting hotter, glaciers are me
   <ol><li>Cutting down trees</li><li>Using public transportation</li><li>Air pollution from cars</li><li>Chemicals from factories</li></ol>
   <details lang="tr"><summary>Cevabı ve açıklamayı göster</summary><p><strong>Doğru cevap: B) Using public transportation</strong></p><p>Soru yalnızca listede bulunmayan seçeneği arıyor. Toplu taşıma kullanmak verilen üç maddeden biri değil.</p></details>
 </article>
+<p class="note"><strong>Yazdırılabilir ünite testi:</strong> Natural Forces ünitesinden 14 LGS tarzı soru, cevap anahtarıyla tek yaprakta. <a href="/lgs-kelimeleri/calisma-kagitlari/unite-10-natural-forces/">10. ünite testini PDF olarak indir</a></p>
 
 <section class="cta">
   <p><strong>Bu kelimeleri ezberlemek yerine kalıcı öğren.</strong><br>Natural Forces ünitesini uygulamada quiz, kart ve oyunlarla çalış; unuttuğun kelimeler aralıklı tekrarla karşına tekrar çıksın.</p>
@@ -342,7 +351,7 @@ Paul: I think it is global warming. The Earth is getting hotter, glaciers are me
 </main>
 <footer><div class="wrap">
   <p>LGS İngilizce Kelime · MEB 8. sınıf İngilizce müfredatına göre hazırlanmış bağımsız bir çalışma kaynağıdır; MEB ile resmî bir bağlantısı yoktur.</p>
-  <p><a href="/lgs-kelimeleri/">Tüm üniteler</a> · <a href="/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/">LGS İngilizce çalışma rehberi</a> · <a href="https://themontana.github.io/lgs-ingilizce.html">Uygulama hakkında</a> · <a href="https://play.google.com/store/apps/details?id=com.lgskelimeapp.app&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/app/id6753321196" rel="noopener">App Store</a></p>
+  <p><a href="/lgs-kelimeleri/">Tüm üniteler</a> · <a href="/lgs-kelimeleri/lgs-ingilizce-nasil-calisilir/">LGS İngilizce çalışma rehberi</a> · <a href="/lgs-kelimeleri/calisma-kagitlari/">Ünite testleri (PDF)</a> · <a href="https://themontana.github.io/lgs-ingilizce.html">Uygulama hakkında</a> · <a href="https://play.google.com/store/apps/details?id=com.lgskelimeapp.app&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/app/id6753321196" rel="noopener">App Store</a></p>
 </div></footer>
 <script>
 (function(){
