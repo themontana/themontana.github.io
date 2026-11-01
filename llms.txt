@@ -35,6 +35,7 @@ Links:
 - [7. sınıf İngilizce kelimeleri](https://themontana.github.io/lgs-kelimeleri/7-sinif/): 7th-grade word lists (website only, not in the app) with Turkish meanings and example sentences.
 - [Grade 7 Unit 1 Appearance and Personality](https://themontana.github.io/lgs-kelimeleri/7-sinif/unite-1-appearance-and-personality/)
 - [Grade 7 Unit 2 Sports](https://themontana.github.io/lgs-kelimeleri/7-sinif/unite-2-sports/)
+- [Grade 7 Unit 3 Biographies](https://themontana.github.io/lgs-kelimeleri/7-sinif/unite-3-biographies/)
 
 ## Other apps
 
